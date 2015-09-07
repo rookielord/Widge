@@ -19,10 +19,16 @@
         <receiver android:name=".WidgeProvider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.zhd.widget.UPDATE_IMAGE"/>
             </intent-filter>
             <meta-data android:name="android.appwidget.provider"
                 android:resource="@xml/widget" />
         </receiver>
+        <service android:name=".WidgeService">
+            <intent-filter>
+                <action android:name="com.zhd.widgetservice"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
